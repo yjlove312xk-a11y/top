@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Tự Động</title>
+    <script type="text/javascript">
+        // Mảng chứa các URL video TikTok
+        var videoUrls = [
+            "https://lite.tiktok.com/t/ZSM43sfyA/,",  // Video đầu tiên
+            "https://lite.tiktok.com/t/ZSMDH1S8J/,",  // Video thứ hai
+            "https://lite.tiktok.com/t/ZSMDuEGUf/,"   // Video thứ ba
+        ];
+
+        // Hàm thay đổi URL video mỗi giờ
+        function changeVideo() {
+            var currentTime = new Date().getHours(); // Lấy giờ hiện tại
+            var videoIndex = Math.floor(currentTime / 1) % videoUrls.length;  // Chọn video theo giờ
+            window.location.href = videoUrls[videoIndex];  // Chuyển hướng đến video theo giờ
+        }
+
+        // Thực hiện thay đổi video mỗi khi trang được tải
+        window.onload = function() {
+            setInterval(changeVideo, 3600000);  // Mỗi giờ (3600000 ms)
+            changeVideo();  // Thực hiện ngay khi trang tải lần đầu
+        }
+    </script>
+</head>
+<body>
+    <h1>Trang sẽ tự động mở video TikTok mỗi giờ</h1>
+    <p>Chờ một chút, video sẽ tự động thay đổi sau mỗi giờ...</p>
+</body>
+</html>
