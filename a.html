@@ -3,31 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Tự Động</title>
-    <script type="text/javascript">
-        // Mảng chứa các URL video TikTok
-        var videoUrls = [
-            "https://lite.tiktok.com/t/ZSM43sfyA/,",  // Video đầu tiên
-            "https://lite.tiktok.com/t/ZSMDH1S8J/,",  // Video thứ hai
-            "https://lite.tiktok.com/t/ZSMDuEGUf/,"   // Video thứ ba
-        ];
+    <title>TikTok Lite Links</title>
 
-        // Hàm thay đổi URL video mỗi giờ
-        function changeVideo() {
-            var currentTime = new Date().getHours(); // Lấy giờ hiện tại
-            var videoIndex = Math.floor(currentTime / 1) % videoUrls.length;  // Chọn video theo giờ
-            window.location.href = videoUrls[videoIndex];  // Chuyển hướng đến video theo giờ
+    <style>
+        * {
+            box-sizing: border-box;
         }
 
-        // Thực hiện thay đổi video mỗi khi trang được tải
-        window.onload = function() {
-            setInterval(changeVideo, 3600000);  // Mỗi giờ (3600000 ms)
-            changeVideo();  // Thực hiện ngay khi trang tải lần đầu
+        body {
+            margin: 0;
+            padding: 16px;
+            background: #111;
+            font-family: Arial, Helvetica, sans-serif;
         }
-    </script>
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .link-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 12px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            background: #ff0050;
+            color: #fff;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: opacity 0.2s ease;
+        }
+
+        .link-btn:active {
+            opacity: 0.7;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Trang sẽ tự động mở video TikTok mỗi giờ</h1>
-    <p>Chờ một chút, video sẽ tự động thay đổi sau mỗi giờ...</p>
+
+    <h2>Danh sách Link</h2>
+
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5TSr5nV/" target="_blank" rel="noopener">Link 1</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5TSm4C2/" target="_blank" rel="noopener">Link 2</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5TAjBRQ/" target="_blank" rel="noopener">Link 3</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5TDDaPG/" target="_blank" rel="noopener">Link 4</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5TU1sPm/" target="_blank" rel="noopener">Link 5</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5TP7kED/" target="_blank" rel="noopener">Link 6</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5T34Jes/" target="_blank" rel="noopener">Link 7</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZS5T3q1fx/" target="_blank" rel="noopener">Link 8</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZSa2nCbs7/" target="_blank" rel="noopener">Link 9</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZSa2nnqU5/" target="_blank" rel="noopener">Link 10</a>
+    <a class="link-btn" href="https://lite.tiktok.com/t/ZSa2nq8sG/" target="_blank" rel="noopener">Link 11</a>
+
 </body>
 </html>
